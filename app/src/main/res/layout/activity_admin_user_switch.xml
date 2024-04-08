@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#F9E0C0">
+
+    <!-- ImageView on Top -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/adminuser" />
+
+    <!-- Admin Login Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/adminButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#b22234"
+        android:text="Admin Login"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- User Login Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/userButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3c3b6e"
+        android:text="User Login"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+

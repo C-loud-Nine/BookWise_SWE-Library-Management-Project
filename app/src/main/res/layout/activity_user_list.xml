@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#69A797">
+
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="User List"
+        android:textColor="#F0F0DB"
+        android:textColorHint="@color/design_default_color_error"
+        android:textSize="30sp"
+        android:transitionName="logo_text"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#555358"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <ListView
+        android:id="@+id/userListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="10dp"
+        android:divider="#555358"
+        android:dividerHeight="2dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:background="#F7B487"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>

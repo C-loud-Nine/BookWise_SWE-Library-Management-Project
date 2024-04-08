@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Wish_List"
+    android:background="#FEA380">
+
+    <TextView
+        android:id="@+id/wish"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Wish List"
+        android:textColor="#444974"
+        android:textColorHint="@color/design_default_color_error"
+        android:textSize="23sp"
+        android:transitionName="logo_text"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background=" #E4E7EB"
+        android:layout_marginTop="20dp"
+        />
+
+    <ListView
+        android:id="@+id/wishlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/wish"
+        android:layout_marginTop="20dp"
+        android:divider="#555358"
+        android:dividerHeight="2dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:background=" #E4E7EB"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>

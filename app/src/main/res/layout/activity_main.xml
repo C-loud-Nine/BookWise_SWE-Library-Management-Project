@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+android:background="#3B7873"
+tools:context=".MainActivity">
+
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="324dp"
+    android:layout_height="240dp"
+    android:layout_marginStart="40dp"
+    android:layout_marginTop="100dp"
+    android:layout_marginEnd="40dp"
+    android:layout_marginBottom="316dp"
+    android:src="@drawable/homelogo"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.428"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.346"
+    android:transitionName="logo_image"/>
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="272dp"
+    android:layout_height="113dp"
+    android:layout_marginStart="50dp"
+    android:layout_marginEnd="50dp"
+    android:layout_marginBottom="50dp"
+    android:text="BookHive"
+    android:textAlignment="center"
+    android:textColor="#D99471"
+    android:textSize="50sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.743"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.707"
+    android:transitionName="logo_text"
+    android:textStyle="bold"/>
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="532dp"
+    android:text="Welcome to BookHive"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:gravity="center"/>
+>>>>>>> e5cce58 (Second Commit [Admin , User Login-Reg.]: Shafi)
+
+</androidx.constraintlayout.widget.ConstraintLayout>

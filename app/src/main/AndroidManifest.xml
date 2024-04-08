@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BookWiseSWEProject"
+        tools:targetApi="31">
+        <activity
+            android:name=".Return_Book"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".User_Wish_Book"
+            android:exported="false" />
+        <activity
+            android:name=".Rental_History"
+            android:exported="false" />
+        <activity
+            android:name=".Rent_Book"
+            android:exported="false" />
+        <activity
+            android:name=".Defaulter_List"
+            android:exported="false" />
+        <activity
+            android:name=".Update_Book"
+            android:exported="false" />
+        <activity
+            android:name=".Add_Book"
+            android:exported="false" />
+        <activity
+            android:name=".Wish_List"
+            android:exported="false" />
+        <activity
+            android:name=".User_List"
+            android:exported="false" />
+        <activity
+            android:name=".Inventory"
+            android:exported="false" />
+        <activity
+            android:name=".User_Dash"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Dash"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_User_Switch"
+            android:exported="false" />
+        <activity
+            android:name=".User_Reg"
+            android:exported="false" />
+        <activity
+            android:name=".User_Login"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

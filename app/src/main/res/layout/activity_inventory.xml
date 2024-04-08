@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#365F73">
+
+
+    <TextView
+        android:id="@+id/inventory"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Inventory"
+        android:textColor="#313A5C"
+        android:textColorHint="@color/design_default_color_error"
+        android:textSize="30sp"
+        android:transitionName="logo_text"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#EBEBEB"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <ListView
+        android:id="@+id/inventoryListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/inventory"
+        android:layout_marginTop="10dp"
+        android:divider="#555358"
+        android:dividerHeight="2dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:background="#C8D9C1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>
