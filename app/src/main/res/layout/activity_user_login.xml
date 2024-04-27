@@ -48,53 +48,35 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Card_no"
-            android:hint="Name"
+
+            android:hint="Email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginBottom="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
-
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FCC996"
-                android:inputType="number"
+                android:inputType="textEmailAddress"
                 android:textStyle="bold"
                 android:textSize="17dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/phone"
-            android:hint="Phone / ID"
-            android:layout_marginBottom="10dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberPassword"
-                android:background="#FCC996"
-                android:textStyle="bold"
-                android:textSize="17dp"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/pin"
+
             android:hint="Pin"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-
+                android:id="@+id/pin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberPassword"

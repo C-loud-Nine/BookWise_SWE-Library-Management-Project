@@ -26,7 +26,15 @@ import java.util.HashMap;
 
 public class User_Reg extends AppCompatActivity {
 
-    private FirebaseAuth firebaseauth;
+    // Singleton Instance of FirebaseAuth
+    private static FirebaseAuth instance, firebaseauth;
+
+    public static FirebaseAuth getInstance() {
+        if (instance == null) {
+            instance = FirebaseAuth.getInstance();
+        }
+        return instance;
+    }
     private TextInputEditText name_edt, phone_edt, email_edt, pin_edt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +50,6 @@ public class User_Reg extends AppCompatActivity {
         MaterialButton registerButton = findViewById(R.id.btnreg);
         @SuppressLint("WrongViewCast") MaterialButton loginButton = findViewById(R.id.call_login);
 
-        /*DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-        databaseReference.setValue("Hello This is a test!");*/
-
-//        registerButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Perform registration functionality here
-//                // For demonstration purposes, let's just navigate to another activity
-//                Intent intent = new Intent(User_Reg.this, DashboardActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
