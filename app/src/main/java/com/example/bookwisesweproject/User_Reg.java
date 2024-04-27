@@ -55,8 +55,9 @@ public class User_Reg extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate to the login activity when loginButton is clicked
-                Intent intent = new Intent(User_Reg.this, User_Login.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(User_Reg.this, User_Login.class);
+                startActivity(intent);*/
+                finish();
             }
         });
 

@@ -12,11 +12,16 @@ import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class User_Dash extends AppCompatActivity implements View.OnClickListener {
 
 
     //Variables
+
+    private FirebaseAuth firebaseAuth;
 
     DrawerLayout drawerLayout;
     //    NavigationView navigationView;
@@ -55,6 +60,7 @@ public class User_Dash extends AppCompatActivity implements View.OnClickListener
         c6.setOnClickListener(this);
 
 
+        firebaseAuth = FirebaseAuth.getInstance();
 
     }
 
@@ -69,10 +75,22 @@ public class User_Dash extends AppCompatActivity implements View.OnClickListener
         } else if (v.getId() == R.id.rentalhistory) {
             Intent intent = new Intent(User_Dash.this, Rental_History.class);
             startActivity(intent);
-        } else if (v.getId() == R.id.wishabook) {
-            Intent intent = new Intent(User_Dash.this, User_Wish_Book.class);
-            startActivity(intent);
-        } else if (v.getId() == R.id.profile) {
+        } else if (v.getId() == R.id.wishabook)
+        {
+//            Intent intent = new Intent(User_Dash.this, User_Wish_Book.class);
+//            startActivity(intent);
+            //Apadoto Logout er kaj ekhane rakhlam
+
+            //clears all activities and returns to Login Page
+            Intent intents = new Intent(User_Dash.this, Admin_User_Switch.class);
+            Toast.makeText(User_Dash.this, "Logged Out", Toast.LENGTH_SHORT).show();
+            firebaseAuth.signOut();
+            intents.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                    | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intents);
+            finish();
+        }
+        else if (v.getId() == R.id.profile) {
             Intent intent = new Intent(User_Dash.this, Profile.class);
             startActivity(intent);
         } else if (v.getId() == R.id.returnbook) {
