@@ -10,6 +10,8 @@ import android.view.WindowManager;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class User_Reg extends AppCompatActivity {
 
@@ -21,6 +23,9 @@ public class User_Reg extends AppCompatActivity {
 
         MaterialButton registerButton = findViewById(R.id.btnreg);
         @SuppressLint("WrongViewCast") MaterialButton loginButton = findViewById(R.id.call_login);
+
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference.setValue("Hello This is a test!");
 
 //        registerButton.setOnClickListener(new View.OnClickListener() {
 //            @Override

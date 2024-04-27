@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bookwisesweproject.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView image;
     TextView logo,slogan;
 
+    DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         logo.setAnimation(bottomAnim);
         slogan.setAnimation(bottomAnim);
 
-        new Handler().postDelayed(new Runnable(){
+        /*new Handler().postDelayed(new Runnable(){
 
             @Override
 
@@ -70,9 +73,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-        },SPLASH_SCREEN);
+        },SPLASH_SCREEN);*/
 
-
-
+        startActivity(new Intent(MainActivity.this, Admin_User_Switch.class));
+        /*databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference.setValue("Hello This is a test from the northern part of England");*/
     }
 }
