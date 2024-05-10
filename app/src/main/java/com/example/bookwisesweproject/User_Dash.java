@@ -86,7 +86,8 @@ public class User_Dash extends AppCompatActivity implements View.OnClickListener
             Intent intent = new Intent(User_Dash.this, Inventory.class);
             startActivity(intent);
         } else if (v.getId() == R.id.rentalhistory) {
-            Intent intent = new Intent(User_Dash.this, Rental_History.class);
+            //Intent intent = new Intent(User_Dash.this, Rental_History.class);
+            Intent intent = new Intent(User_Dash.this, User_Notification.class);
             startActivity(intent);
         } else if (v.getId() == R.id.wishabook)
         {

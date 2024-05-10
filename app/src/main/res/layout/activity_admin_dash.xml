@@ -160,7 +160,7 @@
                         android:layout_below="@id/bus1"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:text="Wish List"
+                        android:text="Notification"
                         android:textSize="20sp"
                         android:textStyle="bold"
                          />

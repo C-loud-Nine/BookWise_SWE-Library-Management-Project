@@ -76,7 +76,8 @@ public class Admin_Dash extends AppCompatActivity implements View.OnClickListene
             startActivity(intent);
         }
         else if (v.getId() == R.id.wishlist) {
-            Intent intent = new Intent(getApplicationContext(), Wish_List.class);
+            //Intent intent = new Intent(getApplicationContext(), Wish_List.class);
+            Intent intent = new Intent(getApplicationContext(), Admin_Notification.class);
             startActivity(intent);
         }
         else if (v.getId() == R.id.defaulter) {
