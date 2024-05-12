@@ -20,6 +20,7 @@
 
     <!-- Admin Login Button -->
     <com.google.android.material.button.MaterialButton
+        android:foreground= "?attr/selectableItemBackground"
         android:id="@+id/adminButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,6 +33,7 @@
 
     <!-- User Login Button -->
     <com.google.android.material.button.MaterialButton
+        android:foreground= "?attr/selectableItemBackground"
         android:id="@+id/userButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

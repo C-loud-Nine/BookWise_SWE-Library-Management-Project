@@ -1,9 +1,10 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Return_Book"
-    android:background="#FCCC6D">
+    android:background="#FCCC6D"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/rent"
@@ -35,4 +36,4 @@
         android:layout_marginLeft="10dp"
 
         android:layout_marginBottom="10dp"/>
-</RelativeLayout>
+</LinearLayout>

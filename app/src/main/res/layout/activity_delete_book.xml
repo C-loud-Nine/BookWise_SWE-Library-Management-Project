@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#365F73">
-
+    android:background="#365F73"
+    tools:context=".Delete_Book">
 
     <TextView
         android:id="@+id/inventory"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Inventory"
+        android:text="Delete Books"
         android:textColor="#313A5C"
         android:textColorHint="@color/design_default_color_error"
         android:textSize="30sp"
@@ -22,7 +24,7 @@
         android:layout_marginTop="20dp"/>
 
     <ListView
-        android:id="@+id/inventorygenreListView"
+        android:id="@+id/deletebookListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/inventory"

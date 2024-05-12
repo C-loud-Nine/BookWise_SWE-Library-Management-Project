@@ -67,6 +67,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView">
 
             <androidx.cardview.widget.CardView
+                android:foreground= "?attr/selectableItemBackground"
                 android:id="@+id/userlist"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -100,6 +101,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:foreground= "?attr/selectableItemBackground"
                 android:id="@+id/inventory"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -145,6 +147,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
             android:background="#3E4262">
             <androidx.cardview.widget.CardView
+                android:foreground= "?attr/selectableItemBackground"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -160,7 +163,7 @@
                         android:layout_below="@id/bus1"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:text="Wish List"
+                        android:text="Notification"
                         android:textSize="20sp"
                         android:textStyle="bold"
                          />
@@ -174,6 +177,7 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                android:foreground= "?attr/selectableItemBackground"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -189,7 +193,7 @@
                         android:layout_below="@id/train"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:text="Defaulter List"
+                        android:text="Log Out"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         />
@@ -216,6 +220,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
             android:background="#3E4262">
             <androidx.cardview.widget.CardView
+                android:foreground= "?attr/selectableItemBackground"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -245,6 +250,7 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                android:foreground= "?attr/selectableItemBackground"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"

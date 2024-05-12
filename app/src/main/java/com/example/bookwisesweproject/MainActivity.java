@@ -13,17 +13,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bookwisesweproject.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class MainActivity extends AppCompatActivity {
 
 
     //Variables
-    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN = 3000; //initially 5000
     Animation topAnim,bottomAnim;
     ImageView image;
     TextView logo,slogan;
 
+    DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,14 +68,15 @@ public class MainActivity extends AppCompatActivity {
 
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
                 startActivity(intent,options.toBundle());
-
+                finish();
 
 
             }
 
         },SPLASH_SCREEN);
 
-
-
+        //startActivity(new Intent(MainActivity.this, Admin_User_Switch.class));
+        /*databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference.setValue("Hello This is a test from the northern part of England");*/
     }
 }

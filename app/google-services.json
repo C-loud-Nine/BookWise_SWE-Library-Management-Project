@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "950729713098",
+    "firebase_url": "https://bookwise-eea47-default-rtdb.firebaseio.com",
+    "project_id": "bookwise-eea47",
+    "storage_bucket": "bookwise-eea47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950729713098:android:b610d8d1e57b69eede1b33",
+        "android_client_info": {
+          "package_name": "com.example.bookwisesweproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAurUhqqgAK6FlAVjSlkyMCwCqRxjqll0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950729713098:android:54e2f80ed92d47f1de1b33",
+        "android_client_info": {
+          "package_name": "com.example.fbase2024"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAurUhqqgAK6FlAVjSlkyMCwCqRxjqll0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
