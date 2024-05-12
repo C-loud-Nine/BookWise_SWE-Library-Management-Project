@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Variables
-    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN = 3000; //initially 5000
     Animation topAnim,bottomAnim;
     ImageView image;
     TextView logo,slogan;
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         logo.setAnimation(bottomAnim);
         slogan.setAnimation(bottomAnim);
 
-        /*new Handler().postDelayed(new Runnable(){
+        new Handler().postDelayed(new Runnable(){
 
             @Override
 
@@ -68,14 +68,14 @@ public class MainActivity extends AppCompatActivity {
 
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
                 startActivity(intent,options.toBundle());
-
+                finish();
 
 
             }
 
-        },SPLASH_SCREEN);*/
+        },SPLASH_SCREEN);
 
-        startActivity(new Intent(MainActivity.this, Admin_User_Switch.class));
+        //startActivity(new Intent(MainActivity.this, Admin_User_Switch.class));
         /*databaseReference = FirebaseDatabase.getInstance().getReference();
         databaseReference.setValue("Hello This is a test from the northern part of England");*/
     }

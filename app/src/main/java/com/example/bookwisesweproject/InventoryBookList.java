@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,6 +25,7 @@ public class InventoryBookList extends AppCompatActivity {
     ArrayAdapter<String> bookadapter;
     ArrayList<String> books = new ArrayList<>();
     ArrayList<String> isbns = new ArrayList<>();
+    ArrayList<String> authors = new ArrayList<>();
     DatabaseReference gref;
     String genre_name;
     @Override
@@ -44,12 +46,14 @@ public class InventoryBookList extends AppCompatActivity {
         gref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                isbns.clear(); books.clear();
+                isbns.clear(); books.clear(); authors.clear();
                 for(DataSnapshot snapshot2: snapshot.getChildren()){
                     String isbn_value = snapshot2.getKey();
-                    String book_name = snapshot2.child("author").getValue(String.class);
+                    String author_name = snapshot2.child("author").getValue(String.class);
+                    String book_name = snapshot2.child("name").getValue(String.class);
                     isbns.add(isbn_value);
                     books.add(book_name);
+                    authors.add(author_name);
                 }
                 bookadapter.notifyDataSetChanged();
             }
@@ -65,11 +69,26 @@ public class InventoryBookList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Intent intent = new Intent(InventoryBookList.this, InventoryBookDetails.class);
-                Intent intent = new Intent(InventoryBookList.this, Rent_Book.class);
-                //String test = cars.get(position);
-                intent.putExtra("isbn_name",isbns.get(position));
-                intent.putExtra("book_name",books.get(position));
-                startActivity(intent);
+
+                //User and Admin go to different pages from here
+                if(FirebaseAuth.getInstance().getCurrentUser() != null)
+                {
+                    Intent intent = new Intent(InventoryBookList.this, Rent_Book.class);
+                    //String test = cars.get(position);
+                    intent.putExtra("isbn_name",isbns.get(position));
+                    intent.putExtra("book_name",books.get(position));
+                    startActivity(intent);
+                }
+                else
+                {
+                    Intent intent = new Intent(InventoryBookList.this, Update_Book.class);
+                    //String test = cars.get(position);
+                    intent.putExtra("isbn_name",isbns.get(position));
+                    intent.putExtra("book_name",books.get(position));
+                    intent.putExtra("genre_name",genre_name);
+                    intent.putExtra("author_name",authors.get(position));
+                    startActivity(intent);
+                }
             }
         });
     }

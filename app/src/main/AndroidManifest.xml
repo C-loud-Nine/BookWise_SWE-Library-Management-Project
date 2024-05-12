@@ -13,6 +13,12 @@
         android:theme="@style/Theme.BookWiseSWEProject"
         tools:targetApi="31">
         <activity
+            android:name=".Delete_Book"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".User_Notification"
             android:exported="false" />
         <activity

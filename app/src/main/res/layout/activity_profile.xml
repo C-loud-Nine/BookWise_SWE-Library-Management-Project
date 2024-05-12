@@ -20,13 +20,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/titleName"
+        android:id="@+id/titlemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Name"
+        android:text="Email"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/profileImg"
         app:layout_constraintHorizontal_bias="0.506"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleName">
+        app:layout_constraintTop_toBottomOf="@+id/titlemail">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,7 +64,7 @@
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:text="Name :"
                 android:textColor="#FF6048"
                 android:textSize="18sp"
@@ -102,7 +102,7 @@
                 android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:text="Phone Number :"
                 android:textColor="#FF6048"
                 android:textSize="18sp"
@@ -139,18 +139,18 @@
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Pin Number :"
+                android:layout_weight="0"
+                android:text="Books Rented :"
                 android:textColor="#FF6048"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/profilepin"
+                android:id="@+id/profiletotalbooks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pin"
+                android:text="0"
                 android:textAlignment="viewEnd"
                 android:textColor="#505050"
                 android:textSize="18sp"
@@ -169,6 +169,7 @@
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:foreground= "?attr/selectableItemBackground"
         android:id="@+id/backButton"
         android:layout_width="300dp"
         android:layout_height="45dp"

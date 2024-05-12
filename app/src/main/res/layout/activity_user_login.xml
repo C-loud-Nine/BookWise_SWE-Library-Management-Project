@@ -88,7 +88,7 @@
 
 
         <com.google.android.material.button.MaterialButton
-
+            android:foreground= "?attr/selectableItemBackground"
             android:id="@+id/btnlogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
             android:textStyle="bold"/>
 
         <com.google.android.material.button.MaterialButton
-
+            android:foreground= "?attr/selectableItemBackground"
             android:id="@+id/callreg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -114,6 +114,20 @@
             android:textSize="18sp"
             app:backgroundTint="#FDBEC6"
             android:textStyle="bold"/>
+
+        <TextView
+            android:foreground= "?attr/selectableItemBackground"
+            android:id="@+id/forget_password"
+            android:layout_width="146dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="Forgot Password?"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            />
 
 
     </LinearLayout>
