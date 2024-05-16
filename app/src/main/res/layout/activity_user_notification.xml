@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#ACCC6A"
-        >
+        android:background="#F09494"
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/notif"
@@ -19,78 +19,70 @@
             android:layout_height="60dp"
             android:text="Notification"
             android:textColor="#444974"
-            android:textColorHint="@color/design_default_color_error"
             android:textSize="23sp"
-            android:transitionName="logo_text"
             android:gravity="center"
             android:textStyle="bold"
-            android:background=" #E4E7EB"
+            android:background="#E4E7EB"
             android:layout_marginTop="20dp"
-            />
+            android:padding="8dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            >
+            android:padding="16dp"
+            android:background="#FAFAFA"
+            android:elevation="4dp"
+            android:layout_marginTop="130dp"
+            app:cornerRadius="16dp">
 
             <TextView
                 android:id="@+id/msgtv"
-                android:layout_width="300sp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
                 android:text=""
                 android:textStyle="bold|italic"
                 android:textSize="18sp"
                 android:hint="Message"
-                android:background="@color/white"
-                />
-
-
-
-
-
-            <LinearLayout
-                android:layout_marginTop="70dp"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <com.google.android.material.button.MaterialButton
-                    android:foreground= "?attr/selectableItemBackground"
-                    android:id="@+id/subscribebtn"
-                    android:layout_width="170dp"
-                    android:layout_height="45dp"
-                    android:background="#E2DAD2"
-                    android:gravity="center"
-                    android:text="Subscribe"
-                    android:textColor=" #31115A"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:backgroundTint="#E2DAD2"
-                    app:cornerRadius="20dp"
-                    />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_marginTop="50dp"
-                    android:foreground= "?attr/selectableItemBackground"
-                    android:id="@+id/unsubscribebtn"
-                    android:layout_width="170dp"
-                    android:layout_height="45dp"
-                    android:background="#E2DAD2"
-                    android:gravity="center"
-                    android:text="UnSubscribe"
-                    android:textColor=" #31115A"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:backgroundTint="#E2DAD2"
-                    app:cornerRadius="20dp"
-                    />
-
-            </LinearLayout>
+                android:background="#F5CDCD"
+                android:padding="16dp"
+                android:gravity="start|top" />
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:weightSum="2">
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/subscribebtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#E2DAD2"
+                android:text="Subscribe"
+                android:textColor="#31115A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                android:layout_marginEnd="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/unsubscribebtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#E2DAD2"
+                android:text="Unsubscribe"
+                android:textColor="#31115A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
