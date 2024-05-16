@@ -15,6 +15,7 @@ import android.view.ContextThemeWrapper;
 import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,7 +42,8 @@ public class User_Dash extends AppCompatActivity implements View.OnClickListener
     Toolbar toolbar;
     Menu menu;
 
-    TextView textView;
+    TextView textView, notificationText;
+    ImageView notificationIcon;
     CardView c1,c2,c3,c4,c5,c6;
 
     @SuppressLint("MissingInflatedId")
@@ -55,6 +57,9 @@ public class User_Dash extends AppCompatActivity implements View.OnClickListener
 
         drawerLayout = findViewById(R.id.drawerLayout);
 //        navigationView=findViewById(R.id.navigationView);
+
+        notificationIcon = findViewById(R.id.notificationIcon);
+        notificationText = findViewById(R.id.notificationText);
         textView=findViewById(R.id.textView);
         toolbar=findViewById(R.id.toolbar);
         c1=findViewById(R.id.rentbook);
@@ -71,6 +76,19 @@ public class User_Dash extends AppCompatActivity implements View.OnClickListener
         c4.setOnClickListener(this);
         c5.setOnClickListener(this);
         c6.setOnClickListener(this);
+
+
+
+        notificationIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (notificationText.getVisibility() == View.GONE) {
+                    notificationText.setVisibility(View.VISIBLE);
+                } else {
+                    notificationText.setVisibility(View.GONE);
+                }
+            }
+        });
 
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -138,7 +156,7 @@ public class User_Dash extends AppCompatActivity implements View.OnClickListener
                 }
             });*/
 
-            
+
         }
     }
 
