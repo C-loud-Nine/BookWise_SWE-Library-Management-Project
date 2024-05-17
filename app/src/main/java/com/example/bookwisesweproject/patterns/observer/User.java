@@ -1,7 +1,11 @@
 package com.example.bookwisesweproject.patterns.observer;
 
+import android.provider.Settings;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 
+import com.example.bookwisesweproject.User_Dash;
 import com.example.bookwisesweproject.User_Notification;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -12,13 +16,19 @@ import com.google.firebase.database.ValueEventListener;
 public class User implements Observer{
     private final String uid; // Unique identifier for the user
     private String msg;
-    private final User_Notification userActivity;
+    private User_Notification userActivity;
+    private User_Dash userDash;
     DatabaseReference mref = FirebaseDatabase.getInstance().getReference()
             .child("observer");
 
     public User(String uid, User_Notification userActivity) {
         this.uid = uid;
         this.userActivity = userActivity;
+    }
+
+    public User(String uid, User_Dash userDash) {
+        this.uid = uid;
+        this.userDash = userDash;
     }
 
     @Override
@@ -34,12 +44,25 @@ public class User implements Observer{
                     msg = String.valueOf(snapshot.child("message").getValue(String.class));
 
                     //Below part is to change the TextView of the activity file.
-                    userActivity.runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            userActivity.msgtv.setText(msg);
-                        }
-                    });
+                    if(userActivity!=null)
+                    {
+                        userActivity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                userActivity.msgtv.setText(msg);
+                            }
+                        });
+                    }
+                    else if(userDash!=null)
+                    {
+                        userDash.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                userDash.notificationText.setText(msg);
+                                userDash.notificationIcon.performClick();
+                            }
+                        });
+                    }
                 }
 
             }

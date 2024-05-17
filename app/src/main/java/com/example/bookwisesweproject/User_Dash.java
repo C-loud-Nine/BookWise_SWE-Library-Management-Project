@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.example.bookwisesweproject.patterns.Book;
 import com.example.bookwisesweproject.patterns.BookGenre;
 import com.example.bookwisesweproject.patterns.LibraryItem;
+import com.example.bookwisesweproject.patterns.observer.User;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -42,8 +43,9 @@ public class User_Dash extends AppCompatActivity implements View.OnClickListener
     Toolbar toolbar;
     Menu menu;
 
-    TextView textView, notificationText;
-    ImageView notificationIcon;
+    String uid = FirebaseAuth.getInstance().getUid();
+    public TextView textView, notificationText;
+    public ImageView notificationIcon;
     CardView c1,c2,c3,c4,c5,c6;
 
     @SuppressLint("MissingInflatedId")
@@ -92,6 +94,9 @@ public class User_Dash extends AppCompatActivity implements View.OnClickListener
 
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        User user = new User(uid,this);
+        user.update();
 
     }
 
