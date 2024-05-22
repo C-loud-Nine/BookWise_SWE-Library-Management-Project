@@ -50,8 +50,7 @@ public class User_Reg extends AppCompatActivity {
         email_edt = findViewById(R.id.reg_email);
         pin_edt = findViewById(R.id.reg_pin);
         MaterialButton registerButton = findViewById(R.id.btnreg);
-        @SuppressLint("WrongViewCast") MaterialButton loginButton = findViewById(R.id.call_login);
-
+        MaterialButton loginButton = findViewById(R.id.call_login); // Removed @SuppressLint from here
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,9 +103,10 @@ public class User_Reg extends AppCompatActivity {
             }
         });
 
-    //end of on-create method
+        //end of on-create method
     }
 
+    @SuppressLint("WrongViewCast")
     private void Signin(String Email, String Password){
         firebaseauth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
