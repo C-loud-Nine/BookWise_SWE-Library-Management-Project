@@ -1,10 +1,5 @@
 package com.example.bookwisesweproject;
 
-import static com.example.bookwisesweproject.R.id.call_login;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +8,9 @@ import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -50,7 +48,8 @@ public class User_Reg extends AppCompatActivity {
         email_edt = findViewById(R.id.reg_email);
         pin_edt = findViewById(R.id.reg_pin);
         MaterialButton registerButton = findViewById(R.id.btnreg);
-        MaterialButton loginButton = findViewById(R.id.call_login); // Removed @SuppressLint from here
+        @SuppressLint("WrongViewCast") MaterialButton loginButton = findViewById(R.id.call_login);
+
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,10 +102,9 @@ public class User_Reg extends AppCompatActivity {
             }
         });
 
-        //end of on-create method
+    //end of on-create method
     }
 
-    @SuppressLint("WrongViewCast")
     private void Signin(String Email, String Password){
         firebaseauth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
