@@ -58,6 +58,6 @@ tools:context=".MainActivity">
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     android:gravity="center"/>
-
+>>>>>>> e5cce58 (Second Commit [Admin , User Login-Reg.]: Shafi)
 
 </androidx.constraintlayout.widget.ConstraintLayout>

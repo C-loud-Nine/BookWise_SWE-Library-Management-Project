@@ -137,7 +137,7 @@
             android:text="Already have an account? Login here"
             android:textColor="#000"
             tools:ignore="RtlHardcoded"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:id="@+id/call_login"/>
 
 
