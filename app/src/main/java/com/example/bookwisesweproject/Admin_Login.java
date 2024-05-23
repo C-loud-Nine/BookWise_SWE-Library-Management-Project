@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Admin_Login extends AppCompatActivity {
 
+
     String emailfirebase,passwordfirebase, email, pass;
     TextInputEditText emailedt, passedt;
     //DatabaseReference lref = FirebaseDatabase.getInstance().getReference().child("Admin").child("Logged");;
@@ -120,5 +121,7 @@ public class Admin_Login extends AppCompatActivity {
 
             }
         });
+
     }
+
 }
