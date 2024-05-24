@@ -17,7 +17,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ResetPasswordActivity extends AppCompatActivity {
+public class   ResetPasswordActivity extends AppCompatActivity {
     TextInputEditText emailedt;
     TextInputLayout emaillayout;
     AppCompatButton resetbtn;
