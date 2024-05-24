@@ -7,4 +7,11 @@ public class BookGenre {
     public BookGenre(String genreName) {
         this.genreName = genreName;
     }
+    //asif
+    public void validateGenreName() {
+        if (genreName == null || genreName.isEmpty()) {
+            throw new IllegalArgumentException("Genre name cannot be null or empty");
+        }
+    }
 }
+

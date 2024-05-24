@@ -1,5 +1,8 @@
 package com.example.bookwisesweproject;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +11,6 @@ import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -55,8 +55,8 @@ public class User_Reg extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate to the login activity when loginButton is clicked
-                Intent intent = new Intent(User_Reg.this, User_Login.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(User_Reg.this, User_Login.class);
+                startActivity(intent);*/
                 finish();
             }
         });
