@@ -10,6 +10,7 @@ import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -48,7 +49,9 @@ public class User_Reg extends AppCompatActivity {
         email_edt = findViewById(R.id.reg_email);
         pin_edt = findViewById(R.id.reg_pin);
         MaterialButton registerButton = findViewById(R.id.btnreg);
-        @SuppressLint("WrongViewCast") MaterialButton loginButton = findViewById(R.id.call_login);
+        /*@SuppressLint("WrongViewCast")*/
+
+        Button loginButton = findViewById(R.id.call_login);
 
 
         loginButton.setOnClickListener(new View.OnClickListener() {
