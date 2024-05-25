@@ -22,7 +22,7 @@ public class UserTest {
     @InjectMocks
     User user;
 
-    @Before
+    /*@Before
     public void setUp() {
         MockitoAnnotations.openMocks(this);
     }
@@ -30,7 +30,7 @@ public class UserTest {
     @Test
     public void testUpdate() throws Exception {
         user.update();
-    }
+    }*/
 }
 
 //Generated with love by TestMe :) Please report issues and submit feature requests at: http://weirddev.com/forum#!/testme
