@@ -1,8 +1,6 @@
 name: AndroidBuild
 
 on:
-  pull_request:
-    branches: [master]
   push:
     branches: [master, jami, shafi, asif]
 
