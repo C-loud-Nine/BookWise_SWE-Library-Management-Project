@@ -29,7 +29,7 @@ public class Admin_Login extends AppCompatActivity {
     //DatabaseReference lref = FirebaseDatabase.getInstance().getReference().child("Admin").child("Logged");;
     DatabaseReference lref = LoggedSingleton.getInstance();
 
-    @Override
+    /*@Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
@@ -50,7 +50,7 @@ public class Admin_Login extends AppCompatActivity {
 
             }
         });
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
